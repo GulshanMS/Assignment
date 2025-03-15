@@ -8,11 +8,13 @@ const couponRoutes = require('./routes/couponRoutes');
 
 const app = express();
 
-// Fix CORS issue
+//const cors = require('cors');
+
 app.use(cors({
-    origin: "http://localhost:3000",  // Allow frontend
+    origin: "https://assignment-frontend-91wn.onrender.com", // ✅ Allow your frontend
     credentials: true
 }));
+
 
 app.use(express.json());
 app.use(cookieParser());
